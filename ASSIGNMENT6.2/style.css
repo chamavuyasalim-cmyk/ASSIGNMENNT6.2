@@ -1,0 +1,279 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+.page-header {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 32px 16px;
+}
+
+.page-header h1 {
+    margin: 0 0 8px;
+}
+
+.page-header p {
+    margin: 0;
+}
+
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 32px auto;
+}
+
+section {
+    margin-bottom: 32px;
+}
+
+section > h2 {
+    color: #172554;
+    margin-bottom: 12px;
+}
+
+.section-description {
+    margin-bottom: 24px;
+}
+
+/* Card layout */
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.card {
+    width: 100%;
+    max-width: 320px;
+    min-height: 390px;
+    padding: 24px;
+    border-radius: 16px;
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+}
+
+.card h3 {
+    margin: 12px 0;
+    font-size: 24px;
+}
+
+.card p {
+    margin-top: 0;
+}
+
+.plan-label {
+    display: inline-block;
+    align-self: flex-start;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.price span {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.card ul {
+    padding-left: 20px;
+    margin-bottom: 24px;
+}
+
+.card li {
+    margin-bottom: 8px;
+}
+
+/* Basic card */
+.basic-card {
+    background-color: #ffffff;
+    border-color: #94a3b8;
+}
+
+.basic-card .plan-label {
+    background-color: #e2e8f0;
+    color: #334155;
+}
+
+.basic-card .price {
+    color: #334155;
+}
+
+/* Standard card */
+.standard-card {
+    background-color: #eff6ff;
+    border-color: #2563eb;
+}
+
+.standard-card .plan-label {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.standard-card .price {
+    color: #1d4ed8;
+}
+
+/* Premium card */
+.premium-card {
+    background-color: #f5f3ff;
+    border-color: #7c3aed;
+    border-radius: 28px;
+}
+
+.premium-card .plan-label {
+    background-color: #7c3aed;
+    color: #ffffff;
+}
+
+.premium-card .price {
+    color: #6d28d9;
+}
+
+/* Buttons */
+.card button {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.basic-button {
+    background-color: #334155;
+    color: white;
+}
+
+.standard-button {
+    background-color: #2563eb;
+    color: white;
+}
+
+.premium-button {
+    background-color: #7c3aed;
+    color: white;
+}
+
+.card button:hover {
+    filter: brightness(0.9);
+}
+
+button:focus-visible {
+    outline: 3px solid #f59e0b;
+    outline-offset: 3px;
+}
+
+/* Display demonstration boxes */
+.display-section {
+    background-color: #ffffff;
+    padding: 24px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+}
+
+.demo-box {
+    margin-top: 24px;
+    padding: 18px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.demo-box h3 {
+    margin-top: 0;
+    color: #1d4ed8;
+}
+
+/* Display: block */
+.block-example {
+    display: block;
+    width: 220px;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #dbeafe;
+    border: 2px solid #2563eb;
+}
+
+/* Display: inline */
+.inline-example {
+    display: inline;
+    background-color: #fef3c7;
+    border: 2px solid #d97706;
+    padding: 5px;
+}
+
+/* Display: inline-block */
+.inline-block-example {
+    display: inline-block;
+    width: 150px;
+    height: 70px;
+    padding: 12px;
+    margin: 5px;
+    vertical-align: top;
+    text-align: center;
+    background-color: #d1fae5;
+    border: 2px solid #059669;
+    border-radius: 6px;
+}
+
+/* Footer */
+.footer {
+    background-color: #172554;
+    color: white;
+    text-align: center;
+    padding: 18px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .container {
+        width: 94%;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+
+    .display-section {
+        padding: 16px;
+    }
+}
